@@ -1,6 +1,6 @@
-.App {
+* {
     font-family: sans-serif;
-    text-align: center;
+    
     
   }
   .form {
@@ -17,7 +17,7 @@
   .inputField {
     border: none;
     width: 335px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
   }
   
   .formInput.desc {
@@ -36,46 +36,59 @@
   .fileGroup {
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid #272826;
+    padding: 20px; 
+    width: 500px;
+    height: 500px;
+    position: right;
+   
   }
   .fileInput {
-    width: 120px;
-    height: 120px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(to top, rgb(190, 186, 186), rgb(231, 231, 231));
-    margin-right: 10px;
+    
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
+    border: 0cm;
   }
   .fileInput label{
     cursor: pointer;
   }
   
-  .addIcon{
+  .AddIcon{
     position: absolute;
-    bottom: 9px;
-    right: 7px;
     color: white;
-    background-color: #1289ee;
+    background-color: #3c10f0;
+    border-radius: 5px;
     font-weight: 600;
     padding: 1.5px 4px;
     
   }
-  
+  .addIcon{
+    position: absolute;
+    color: #3c10f0;
+    background-color: #05030c;
+    border-radius: 50% ;
+    font-weight: 600;
+    padding: 1.5px 4px;
+    
+  }
   .fileInputControl {
     display: none;
     cursor: pointer;
+    border: 0cm;
+    
   }
   
-  .postSubmitButton {
-    padding: 10px 20px;
+  .postuploadButton {
+    position:absolute;
+    padding: 10px ;
     font-size: 0.9rem;
     border-radius: 10px;
     border: none;
-    background: #1289ee;
+    background: #17eb22;
     color: white;
     font-weight: 600;
   }

@@ -1,16 +1,13 @@
 import {useState} from "react"
 import './form.css';
 
-export default function Form() {
-  const [data,setData]=useState({
+function Form() {
+  const [setData]=useState({
     postedBy:"",
     title:"",
     description:""
   });
-  const [svg,setSVG]=useState(null);
-  const [png,setPNG]=useState(null);
-  const [docs,setDocs]=useState(null);
-  const [posters,setPosters]=useState(null)
+  
   const inputHandler=(e)=>{
     setData(prevData=>({
       ...prevData,
@@ -19,13 +16,13 @@ export default function Form() {
   }
   return (
     <div className="form">
-      <form className="formControl">
+      <form className="formControl"/>
         <div className="formInput">
           <label>Posted By:</label>
           <input type="text" name="postedBy"className="inputField" placeholder="Type here" onChange={(e)=>inputHandler(e)}/>
         </div>
         <div className="formInput">
-          <label>Title:</label>
+          <label>GUEST-SPEAKER:</label>
           <input
             type="text"
             className="inputField"
@@ -35,7 +32,7 @@ export default function Form() {
           />
         </div>
         <div className="formInput desc">
-          <label>Posted By:</label>
+          <label>DESCRIPITION:</label>
           <textarea
             className="description"
             name="description"
@@ -46,41 +43,73 @@ export default function Form() {
             placeholder="Type here"
             onChange={(e)=>inputHandler(e)}
           />
+        
+        <label> NO.OF TEAMS INVOLOVED: </label>
+          <input type="text" name="Team"className="inputField" placeholder="Team1" onChange={(e)=>inputHandler(e)}/>
         </div>
-        <div className="fileGroup">
-          <div className="fileInput">
-            <label>
-              SVG
-              <input type="file" name="svg" className="fileInputControl" onChange={(e) => setSVG(e.target.files[0])}/>
-              <div className="addIcon">+</div>
-            </label>
-          </div>
-          <div className="fileInput">
-            <label>
-              PNG
-              <input type="file" name="png" className="fileInputControl" onChange={(e) => setPNG(e.target.files[0])}/>
-              <div className="addIcon">+</div>
-            </label>
-          </div>
-          <div className="fileInput">
-            <label>
-              Docs
-              <input type="file" name="docs" className="fileInputControl" onChange={(e) => setDocs(e.target.files[0])}/>
-              <div className="addIcon">+</div>
-            </label>
-          </div>
-          <div className="fileInput">
-            <label>
-              Posters
-              <input type="file" name="psosters" className="fileInputControl" onChange={(e) => setPosters(e.target.files[0])}/>
-              <div className="addIcon">+</div>
-            </label>
-          </div>
+        <div className="formInput">
+        <input type="text" name="Team"className="inputField" placeholder="Team2" onChange={(e)=>inputHandler(e)}/>
         </div>
-        <button type="submit" className="postSubmitButton">
-          Submit
+        <div className="formInput">
+        <input type="text" name="Team"className="inputField" placeholder="Team3" onChange={(e)=>inputHandler(e)}/>
+        </div>
+        <div className="formInput">
+        <input type="text" name="Team"className="inputField" placeholder="Team4" onChange={(e)=>inputHandler(e)}/>
+        </div>
+        <div className="formInput">
+        <input type="text" name="Team"className="inputField" placeholder="Team5" onChange={(e)=>inputHandler(e)}/>
+        </div>
+        <div className="formInput">
+
+        <label>
+        NO.OF PEOPLE INVOLOVED:
+              <input  name="NO.OF PEOPLE INVOLOVED:" className="fileInputControl" onChange={(e)=>inputHandler(e)}/>
+              <div className="addIcon">
+                + </div>
+            </label>
+            
+            <div className="fileGroup">
+              <div className="fileInput">
+               
+                <label id="#svg">
+                  SVG
+                  <input type="file" name="#svg" className="fileInputControl" onChange={(e)=>inputHandler(e)}/>
+                  <div className="AddIcon">+</div>
+                </label>
+              </div>
+              <div className="fileInput">
+                <label id="#png">
+                  PNG
+                  <input type="file" name="png" className="fileInputControl"onChange={(e)=>inputHandler(e)}/>
+                  <div className="AddIcon">+</div>
+                </label>
+              </div>
+              <div className="fileInput">
+                <label>
+                  Docs
+                  <input type="file" name="docs" className="fileInputControl"onChange={(e)=>inputHandler(e)}/>
+                  <div className="AddIcon">+</div>
+                </label>
+              </div>
+              <div className="fileInput">
+                <label>
+                  Posters
+                  <input type="file" name="posters" className="fileInputControl" onChange={(e)=>inputHandler(e)}/>
+                  <div className="AddIcon">+</div> 
+                </label>
+              </div>
+            </div>
+            
+       
+        
+        
+        <button type="upload" className="postuploadButton" >
+          Upload
         </button>
-      </form>
+      <form/>
+    </div>
     </div>
   );
 }
+
+export default Form;

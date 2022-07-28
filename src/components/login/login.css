@@ -13,7 +13,7 @@ body {
   .field__input {
     --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
   
-    background-color: transparent;
+    -color: transparent;
     border-radius: 0;
     border: none;
   
